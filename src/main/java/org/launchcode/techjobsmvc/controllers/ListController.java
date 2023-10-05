@@ -36,12 +36,12 @@ public class ListController {
 
     @GetMapping(value = "")
     public String list(Model model) {
-        model.addAttribute("columns", columnChoices);
-        model.addAttribute("tableChoices", tableChoices);
-        model.addAttribute("employers", JobData.getAllEmployers());
-        model.addAttribute("locations", JobData.getAllLocations());
-        model.addAttribute("positions", JobData.getAllPositionTypes());
-        model.addAttribute("skills", JobData.getAllCoreCompetency());
+        model.addAttribute("columns", columnChoices);                       //HashMap
+        model.addAttribute("tableChoices", tableChoices);                   //HashMap
+        model.addAttribute("employers", JobData.getAllEmployers());         //ArrayList
+        model.addAttribute("locations", JobData.getAllLocations());         //ArrayList
+        model.addAttribute("positions", JobData.getAllPositionTypes());     //ArrayList
+        model.addAttribute("skills", JobData.getAllCoreCompetency());       //ArrayList
 
         return "list";
     }
